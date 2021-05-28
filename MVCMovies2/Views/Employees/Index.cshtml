@@ -1,0 +1,64 @@
+﻿@model IEnumerable<MVCMovies2.Models.Employees>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 style="color:#ffffff">Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th style="color:#ffffff">
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th style="color:#ffffff">
+            @Html.DisplayNameFor(model => model.JoinDate)
+        </th>
+        <th style="color:#ffffff">
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th style="color:#ffffff">
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th style="color:#ffffff">
+            @Html.DisplayNameFor(model => model.ManagerComment)
+        </th>
+        <th style="color:#ffffff">
+            @Html.DisplayNameFor(model => model.ManagerAccept)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td style="color:#ffffff">
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td style="color:#ffffff">
+            @Html.DisplayFor(modelItem => item.JoinDate)
+        </td>
+        <td style="color:#ffffff">
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        <td style="color:#ffffff">
+            @Html.DisplayFor(modelItem => item.Age)
+        </td>
+        <td style="color:#ffffff">
+            @Html.DisplayFor(modelItem => item.ManagerComment)
+        </td>
+        <td style="color:#ffffff">
+            @Html.DisplayFor(modelItem => item.ManagerAccept)
+        </td>
+        <td>
+            <a href="/Employees/Edit?id=@item.ID">Edit</a> |
+            <a href="/Employees/Details?id=@item.ID">Details</a> |
+            <a href="/Employees/Manager?id=@item.ID">Manager</a> |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

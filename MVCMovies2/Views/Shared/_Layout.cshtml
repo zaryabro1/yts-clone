@@ -17,7 +17,7 @@
     <script src="~/Scripts/jquery.dataTables.min.js"></script>
 
 </head>
-<body>
+<body style="background-color:#1A1B1B">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -26,13 +26,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("MVC Movie", "Index", "Movies", null, new { @class = "navbar-brand" })
+                <a href="../Movies"><p class="navbar-brand" style="font-family:Calibri;font-weight:500;font-size:30px;color:#6AC045">MVC Movie</p></a>
+               @* @Html.ActionLink("MVC Movie", "Index", "Movies", null, new { @class = "navbar-brand" })*@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Home", "Index", "Movies")</li>
+                    <li>@Html.ActionLink("Create", "Create", "Movies")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Movies")</li>
+                    <li>@Html.ActionLink("Employees", "Index", "Employees")</li>
                 </ul>
             </div>
         </div>
@@ -41,7 +43,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p style="color:#3F3F3F">&copy; @DateTime.Now.Year - ASP.NET MVC Movie 2</p>
         </footer>
     </div>
     <script>

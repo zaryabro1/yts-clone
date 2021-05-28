@@ -1,0 +1,73 @@
+﻿@model MVCMovies2.Models.Employees
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 style="color:#ffffff">Details</h2>
+
+<div>
+    <h4 style="color:#ffffff">Employees</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt style="color:#ffffff">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd style="color:#ffffff">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt style="color:#ffffff">
+            @Html.DisplayNameFor(model => model.JoinDate)
+        </dt>
+
+        <dd style="color:#ffffff">
+            @Html.DisplayFor(model => model.JoinDate)
+        </dd>
+
+        <dt style="color:#ffffff">
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd style="color:#ffffff">
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt style="color:#ffffff">
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd style="color:#ffffff">
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt style="color:#ffffff">
+            @Html.DisplayNameFor(model => model.ManagerComment)
+        </dt>
+
+        <dd style="color:#ffffff">
+            @Html.DisplayFor(model => model.ManagerComment)
+        </dd>
+
+        <dt style="color:#ffffff">
+            @Html.DisplayNameFor(model => model.ManagerAccept)
+        </dt>
+
+        <dd style="color:#ffffff">
+            @Html.DisplayFor(model => model.ManagerAccept)
+        </dd>
+        <div class="form-group">
+            <p style="color:#ffffff"> @Html.LabelFor(model => model.ManagerComment, htmlAttributes: new { @class = "control-label col-md-2" }) </p>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ManagerComment, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ManagerComment, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

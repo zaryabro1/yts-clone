@@ -22,5 +22,7 @@ namespace MVCMovies2.Models
     public class MovieDBContext : DbContext
     {
         public DbSet<Movie> Movies { get; set; }
+
+        public System.Data.Entity.DbSet<MVCMovies2.Models.Employees> Employees { get; set; }
     }
 }

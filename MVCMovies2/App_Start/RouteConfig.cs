@@ -16,7 +16,7 @@ namespace MVCMovies2
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{name}/{id}",
-                defaults: new { controller = "Movies", action = "Index", id = UrlParameter.Optional, name = UrlParameter.Optional }
+                defaults: new { controller = "Employees", action = "Index", id = UrlParameter.Optional, name = UrlParameter.Optional }
             );
         }
     }
