@@ -89,3 +89,4 @@ C:\Users\Muhammad Ali\source\repos\MVCMovies2\MVCMovies2\obj\Debug\MVCMovies2.Mi
 C:\Users\Muhammad Ali\source\repos\MVCMovies2\MVCMovies2\obj\Debug\MVCMovies2.Migrations.MovieTwelve.resources
 C:\Users\Muhammad Ali\source\repos\MVCMovies2\MVCMovies2\obj\Debug\MVCMovies2.Migrations.moviethirteen.resources
 C:\Users\Muhammad Ali\source\repos\MVCMovies2\MVCMovies2\obj\Debug\MVCMovies2.Migrations.MovieFourteen.resources
+C:\Users\Muhammad Ali\source\repos\MVCMovies2\MVCMovies2\bin\System.Linq.Dynamic.dll
